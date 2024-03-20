@@ -1,9 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-    This is my blog made with Zola.
+
+<h1>
+    Hi friend, welcome to my blog.
 </h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis impedit mollitia explicabo animi quo enim sapiente
+    esse exercitationem corporis, soluta ullam quibusdam, asperiores et quam vitae porro veritatis qui optio.</p>
 <p>Click <a href="{{ get_url(path='@/blog/_index.md') }}">here</a> to see my posts.</p>
+
+<ul>
+    <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->
+    {% for page in section.pages %}
+    <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+    {% endfor %}
+</ul>
 
 {% endblock content %}

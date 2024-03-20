@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://127.0.0.1:5500/public/"
+base_url = "https://aldrincerezo.netlify.app/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -14,3 +14,7 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+# The theme to use for code highlighting.
+# See below for list of allowed values.
+highlight_theme = "base16-ocean-dark"
